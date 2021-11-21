@@ -1,5 +1,5 @@
 # The Future of Mendelian Randomization Studies, December 2021
-<font size=1>**MR Data Challenge**</font>
+<font size=3>**MR Data Challenge**</font>
 
 **Authors: Elizabeth Diemer, Joy Shi and Sonja Swanson**
 
