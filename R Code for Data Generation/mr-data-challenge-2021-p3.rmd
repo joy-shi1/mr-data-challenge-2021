@@ -31,26 +31,6 @@ library(tidyverse)
 ```
 
 # Generating data
-```{r creating placeholder variables for part 2, eval=F}
-
-n <- 50000
-set.seed(5843)
-
-Z <- do.call(cbind,lapply(runif(11, min=0.10, max=0.5), function(i){rbinom(n, 2, i)}))
-colnames(Z) <- paste("Z", seq(1:11), sep="")
-
-id <- seq(1:n)
-U0 <- rnorm(n, 0, 1)
-U1 <- rnorm(n, 0, 1)
-A0 <- rnorm(n, 25, 5)
-A1 <- rnorm(n, 25, 5)
-Y0 <- rbinom(n, 1, 0.025)
-Y1 <- rbinom(n, 1, 0.025)
-
-sim.data <- data.frame(id=id, time=0, Z, U=U0, A=A0, Y=Y0) %>%
-  rbind(data.frame(id=id[Y0==0], time=1, Z[Y0==0,], U=U1[Y0==0], A=A1[Y0==0], Y=Y1[Y0==0]))
-
-```
 ```{r importing data and parameters from part 2}
 pregdata <- read.csv("pregdata.csv")
 parameters <- readRDS("parameters.RDS")
